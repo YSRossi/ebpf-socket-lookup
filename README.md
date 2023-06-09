@@ -96,7 +96,7 @@ $ sudo bpftool map pin name echo_socket bpffs/echo_socket
 Find socket owner PID and FD number:
 
 ```
-vm $ ss -tlpne 'sport = 7777'
+$ ss -tlpne 'sport = 7777'
 State    Recv-Q   Send-Q     Local Address:Port     Peer Address:Port  Process  
 LISTEN   0        10             127.0.0.1:7777          0.0.0.0:*      users:(("ncat",pid=11566,fd=3)) uid:1000 ino:88481 sk:1 <->
 ```
@@ -159,7 +159,7 @@ $ sudo bpftool map dump pinned bpffs/echo_ports
 
 ```
 
-## Re-scan open ports on VM
+## Re-scan open ports
 
 ```
 $ nmap -sT -p 1-1000 10.1.1.5
